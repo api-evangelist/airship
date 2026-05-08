@@ -13,11 +13,13 @@ tags:
 - Mobile
 - CDP
 - Plans
-description: Placeholder plans/pricing artifact for Airship. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled against the provider's documentation.
+description: Placeholder plans/pricing artifact for Airship. Replace with real published pricing once the pipeline researches
+  the provider's plans page.
+notes: "Initial scaffold \u2014 plans/pricing have not yet been reconciled against the provider's documentation."
 sources:
 - https://www.airship.com/
+- https://docs.airship.com/
+- https://docs.airship.com/api/ua/
 plans:
 - id: airship-default
   name: To Be Reconciled
