@@ -1,7 +1,7 @@
 aid: airship
 url: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/apis.yml
 name: Airship
-x-type: company
+kind: company
 description: Airship is a mobile experience and customer engagement platform offering push, in-app, email, SMS, MMS, and feature-flagged
   in-app messaging across mobile and web.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
