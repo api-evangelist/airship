@@ -1,0 +1,296 @@
+openapi: 3.1.0
+info:
+  title: Airship REST API
+  version: "ua"
+  description: |
+    Best-effort OpenAPI 3.1 representation of the Airship (formerly Urban Airship)
+    REST API derived from https://www.airship.com/docs/developer/rest-api/ua/.
+    Airship is a mobile customer engagement platform offering push, in-app, web,
+    SMS, MMS, email messaging, named users, channels, segments, schedules, lists,
+    pipelines, and reports. Authentication supports Basic Auth (App or Master),
+    Bearer Token, and OAuth 2.0 with scoped tokens.
+  contact:
+    name: Airship
+    url: https://www.airship.com/docs/developer/rest-api/ua/
+servers:
+  - url: https://go.airship.com
+    description: Airship US data center
+  - url: https://go.airship.eu
+    description: Airship EU data center
+tags:
+  - name: Push
+  - name: Schedules
+  - name: Channels
+  - name: Named Users
+  - name: Contacts
+  - name: Segments
+  - name: Lists
+  - name: Custom Events
+  - name: Reports
+  - name: Pipelines
+  - name: Templates
+  - name: Message Center
+paths:
+  /api/push:
+    post:
+      tags: [Push]
+      summary: Send a push notification
+      operationId: sendPush
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: A single push object or an array of push objects (max 100).
+      responses:
+        '202':
+          description: Accepted - returns push_ids, message_ids and/or content_urls
+  /api/push/validate:
+    post:
+      tags: [Push]
+      summary: Validate a push payload without sending
+      operationId: validatePush
+      responses:
+        '200': { description: Valid }
+  /api/schedules:
+    get:
+      tags: [Schedules]
+      summary: List scheduled messages
+      operationId: listSchedules
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Schedules]
+      summary: Create a scheduled message
+      operationId: createSchedule
+      responses:
+        '201': { description: Created }
+  /api/schedules/{schedule_id}:
+    get:
+      tags: [Schedules]
+      summary: Get scheduled message
+      operationId: getSchedule
+      parameters:
+        - { name: schedule_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+    put:
+      tags: [Schedules]
+      summary: Update scheduled message
+      operationId: updateSchedule
+      parameters:
+        - { name: schedule_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+    delete:
+      tags: [Schedules]
+      summary: Delete scheduled message
+      operationId: deleteSchedule
+      parameters:
+        - { name: schedule_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '204': { description: Deleted }
+  /api/channels:
+    get:
+      tags: [Channels]
+      summary: List channels
+      operationId: listChannels
+      responses:
+        '200': { description: OK }
+  /api/channels/{channel_id}:
+    get:
+      tags: [Channels]
+      summary: Get a channel
+      operationId: getChannel
+      parameters:
+        - { name: channel_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+  /api/named_users:
+    get:
+      tags: [Named Users]
+      summary: List named users
+      operationId: listNamedUsers
+      responses:
+        '200': { description: OK }
+  /api/named_users/associate:
+    post:
+      tags: [Named Users]
+      summary: Associate a channel with a named user
+      operationId: associateNamedUser
+      responses:
+        '200': { description: OK }
+  /api/named_users/disassociate:
+    post:
+      tags: [Named Users]
+      summary: Disassociate a channel from a named user
+      operationId: disassociateNamedUser
+      responses:
+        '200': { description: OK }
+  /api/segments:
+    get:
+      tags: [Segments]
+      summary: List segments
+      operationId: listSegments
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Segments]
+      summary: Create a segment
+      operationId: createSegment
+      responses:
+        '201': { description: Created }
+  /api/segments/{segment_id}:
+    get:
+      tags: [Segments]
+      summary: Get segment
+      operationId: getSegment
+      parameters:
+        - { name: segment_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+    delete:
+      tags: [Segments]
+      summary: Delete segment
+      operationId: deleteSegment
+      parameters:
+        - { name: segment_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '204': { description: Deleted }
+  /api/lists:
+    get:
+      tags: [Lists]
+      summary: List static lists
+      operationId: listLists
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Lists]
+      summary: Create static list
+      operationId: createList
+      responses:
+        '201': { description: Created }
+  /api/lists/{list_name}:
+    get:
+      tags: [Lists]
+      summary: Get list
+      operationId: getList
+      parameters:
+        - { name: list_name, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+    delete:
+      tags: [Lists]
+      summary: Delete list
+      operationId: deleteList
+      parameters:
+        - { name: list_name, in: path, required: true, schema: { type: string } }
+      responses:
+        '204': { description: Deleted }
+  /api/custom-events:
+    post:
+      tags: [Custom Events]
+      summary: Create custom events
+      operationId: createCustomEvents
+      responses:
+        '200': { description: OK }
+  /api/reports/sends:
+    get:
+      tags: [Reports]
+      summary: App sends report
+      operationId: reportSends
+      responses:
+        '200': { description: OK }
+  /api/reports/opens:
+    get:
+      tags: [Reports]
+      summary: App opens report
+      operationId: reportOpens
+      responses:
+        '200': { description: OK }
+  /api/templates:
+    get:
+      tags: [Templates]
+      summary: List content templates
+      operationId: listTemplates
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Templates]
+      summary: Create content template
+      operationId: createTemplate
+      responses:
+        '201': { description: Created }
+  /api/templates/{template_id}:
+    get:
+      tags: [Templates]
+      summary: Get template
+      operationId: getTemplate
+      parameters:
+        - { name: template_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '200': { description: OK }
+    delete:
+      tags: [Templates]
+      summary: Delete template
+      operationId: deleteTemplate
+      parameters:
+        - { name: template_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '204': { description: Deleted }
+  /api/user/messages/{push_id}:
+    delete:
+      tags: [Message Center]
+      summary: Delete a Message Center message from inboxes
+      operationId: deleteUserMessage
+      parameters:
+        - { name: push_id, in: path, required: true, schema: { type: string } }
+      responses:
+        '204': { description: Deleted }
+  /api/user/messages/batch-delete:
+    post:
+      tags: [Message Center]
+      summary: Batch delete Message Center messages (max 50)
+      operationId: batchDeleteUserMessages
+      responses:
+        '200': { description: OK }
+components:
+  securitySchemes:
+    BasicAppAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth using app_key and app_secret (App level).
+    BasicMasterAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth using app_key and master_secret (Master level - required for most write operations).
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer token.
+    OAuth2:
+      type: oauth2
+      description: |
+        OAuth 2.0 scoped tokens. Scopes include att (attachments), chn (channels),
+        cnt (contacts), evt (events), lst (lists), nu (named users), pln (pipelines),
+        psh (push), rpt (reports), sch (schedules), tpl (content templates).
+      flows:
+        clientCredentials:
+          tokenUrl: https://oauth2.asnapieu.com/token
+          scopes:
+            att: Attachments
+            chn: Channels
+            cnt: Contacts
+            evt: Events
+            lst: Lists
+            nu: Named Users
+            pln: Pipelines
+            psh: Push
+            rpt: Reports
+            sch: Schedules
+            tpl: Content Templates
+security:
+  - BasicMasterAuth: []
+  - BearerAuth: []
+  - OAuth2: [psh]
