@@ -1,0 +1,497 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Push",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Send a push notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/push",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Send a push notification"
+        },
+        {
+          "info": {
+            "name": "Validate a push payload without sending",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/push/validate"
+          },
+          "docs": "Validate a push payload without sending"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Schedules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List scheduled messages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/schedules"
+          },
+          "docs": "List scheduled messages"
+        },
+        {
+          "info": {
+            "name": "Create a scheduled message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/schedules"
+          },
+          "docs": "Create a scheduled message"
+        },
+        {
+          "info": {
+            "name": "Get scheduled message",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/schedules/:schedule_id",
+            "params": [
+              {
+                "name": "schedule_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get scheduled message"
+        },
+        {
+          "info": {
+            "name": "Update scheduled message",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://go.airship.com/api/schedules/:schedule_id",
+            "params": [
+              {
+                "name": "schedule_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update scheduled message"
+        },
+        {
+          "info": {
+            "name": "Delete scheduled message",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/schedules/:schedule_id",
+            "params": [
+              {
+                "name": "schedule_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete scheduled message"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Channels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List channels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/channels"
+          },
+          "docs": "List channels"
+        },
+        {
+          "info": {
+            "name": "Get a channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/channels/:channel_id",
+            "params": [
+              {
+                "name": "channel_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a channel"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Named Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List named users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/named_users"
+          },
+          "docs": "List named users"
+        },
+        {
+          "info": {
+            "name": "Associate a channel with a named user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/named_users/associate"
+          },
+          "docs": "Associate a channel with a named user"
+        },
+        {
+          "info": {
+            "name": "Disassociate a channel from a named user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/named_users/disassociate"
+          },
+          "docs": "Disassociate a channel from a named user"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Segments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List segments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/segments"
+          },
+          "docs": "List segments"
+        },
+        {
+          "info": {
+            "name": "Create a segment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/segments"
+          },
+          "docs": "Create a segment"
+        },
+        {
+          "info": {
+            "name": "Get segment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/segments/:segment_id",
+            "params": [
+              {
+                "name": "segment_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get segment"
+        },
+        {
+          "info": {
+            "name": "Delete segment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/segments/:segment_id",
+            "params": [
+              {
+                "name": "segment_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete segment"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Lists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List static lists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/lists"
+          },
+          "docs": "List static lists"
+        },
+        {
+          "info": {
+            "name": "Create static list",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/lists"
+          },
+          "docs": "Create static list"
+        },
+        {
+          "info": {
+            "name": "Get list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/lists/:list_name",
+            "params": [
+              {
+                "name": "list_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get list"
+        },
+        {
+          "info": {
+            "name": "Delete list",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/lists/:list_name",
+            "params": [
+              {
+                "name": "list_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete list"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Custom Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create custom events",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/custom-events"
+          },
+          "docs": "Create custom events"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "App sends report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/reports/sends"
+          },
+          "docs": "App sends report"
+        },
+        {
+          "info": {
+            "name": "App opens report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/reports/opens"
+          },
+          "docs": "App opens report"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List content templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/templates"
+          },
+          "docs": "List content templates"
+        },
+        {
+          "info": {
+            "name": "Create content template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/templates"
+          },
+          "docs": "Create content template"
+        },
+        {
+          "info": {
+            "name": "Get template",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/templates/:template_id",
+            "params": [
+              {
+                "name": "template_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get template"
+        },
+        {
+          "info": {
+            "name": "Delete template",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/templates/:template_id",
+            "params": [
+              {
+                "name": "template_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete template"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Message Center",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Delete a Message Center message from inboxes",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/user/messages/:push_id",
+            "params": [
+              {
+                "name": "push_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a Message Center message from inboxes"
+        },
+        {
+          "info": {
+            "name": "Batch delete Message Center messages (max 50)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/user/messages/batch-delete"
+          },
+          "docs": "Batch delete Message Center messages (max 50)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
