@@ -1,0 +1,80 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/airship-openapi.yml
+schemes:
+- name: OAuth2
+  source: openapi/airship-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://oauth2.asnapieu.com/token
+  description: |-
+    OAuth 2.0 scoped tokens. Scopes include att (attachments), chn (channels),
+    cnt (contacts), evt (events), lst (lists), nu (named users), pln (pipelines),
+    psh (push), rpt (reports), sch (schedules), tpl (content templates).
+scopes:
+- scope: att
+  description: Attachments
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: chn
+  description: Channels
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: cnt
+  description: Contacts
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: evt
+  description: Events
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: lst
+  description: Lists
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: nu
+  description: Named Users
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: pln
+  description: Pipelines
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: psh
+  description: Push
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: rpt
+  description: Reports
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: sch
+  description: Schedules
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml
+- scope: tpl
+  description: Content Templates
+  flows:
+  - clientCredentials
+  sources:
+  - openapi/airship-openapi.yml

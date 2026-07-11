@@ -74,6 +74,10 @@ apis:
     - type: Documentation
       url: https://docs.airship.com/api/ua/
 common:
+  - type: OAuthScopes
+    url: scopes/airship-scopes.yml
+  - url: https://www.airship.com/feed/
+    type: Blog
   - type: LinkedIn
     url: https://www.linkedin.com/company/airship-social
   - type: Website
