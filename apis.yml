@@ -74,6 +74,12 @@ apis:
     - type: Documentation
       url: https://docs.airship.com/api/ua/
 common:
+  - type: VulnerabilityDisclosure
+    url: security/airship-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/airship-domain-security.yml
+  - type: Authentication
+    url: authentication/airship-authentication.yml
   - type: OAuthScopes
     url: scopes/airship-scopes.yml
   - url: https://www.airship.com/feed/

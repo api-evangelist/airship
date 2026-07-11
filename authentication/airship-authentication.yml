@@ -1,0 +1,34 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/airship-openapi.yml
+summary:
+  types:
+  - http
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+schemes:
+- name: BasicAppAuth
+  type: http
+  scheme: basic
+  description: HTTP Basic auth using app_key and app_secret (App level).
+  sources:
+  - openapi/airship-openapi.yml
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  description: Bearer token.
+  sources:
+  - openapi/airship-openapi.yml
+- name: OAuth2
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://oauth2.asnapieu.com/token
+    scopes: 11
+  description: |-
+    OAuth 2.0 scoped tokens. Scopes include att (attachments), chn (channels),
+    cnt (contacts), evt (events), lst (lists), nu (named users), pln (pipelines),
+    psh (push), rpt (reports), sch (schedules), tpl (content templates).
+  sources:
+  - openapi/airship-openapi.yml
