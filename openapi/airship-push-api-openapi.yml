@@ -1,0 +1,96 @@
+openapi: 3.1.0
+info:
+  title: Airship REST Channels Push API
+  version: ua
+  description: 'Best-effort OpenAPI 3.1 representation of the Airship (formerly Urban Airship)
+
+    REST API derived from https://www.airship.com/docs/developer/rest-api/ua/.
+
+    Airship is a mobile customer engagement platform offering push, in-app, web,
+
+    SMS, MMS, email messaging, named users, channels, segments, schedules, lists,
+
+    pipelines, and reports. Authentication supports Basic Auth (App or Master),
+
+    Bearer Token, and OAuth 2.0 with scoped tokens.
+
+    '
+  contact:
+    name: Airship
+    url: https://www.airship.com/docs/developer/rest-api/ua/
+servers:
+- url: https://go.airship.com
+  description: Airship US data center
+- url: https://go.airship.eu
+  description: Airship EU data center
+security:
+- BasicMasterAuth: []
+- BearerAuth: []
+- OAuth2:
+  - psh
+tags:
+- name: Push
+paths:
+  /api/push:
+    post:
+      tags:
+      - Push
+      summary: Send a push notification
+      operationId: sendPush
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: A single push object or an array of push objects (max 100).
+      responses:
+        '202':
+          description: Accepted - returns push_ids, message_ids and/or content_urls
+  /api/push/validate:
+    post:
+      tags:
+      - Push
+      summary: Validate a push payload without sending
+      operationId: validatePush
+      responses:
+        '200':
+          description: Valid
+components:
+  securitySchemes:
+    BasicAppAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth using app_key and app_secret (App level).
+    BasicMasterAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic auth using app_key and master_secret (Master level - required for most write operations).
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: Bearer token.
+    OAuth2:
+      type: oauth2
+      description: 'OAuth 2.0 scoped tokens. Scopes include att (attachments), chn (channels),
+
+        cnt (contacts), evt (events), lst (lists), nu (named users), pln (pipelines),
+
+        psh (push), rpt (reports), sch (schedules), tpl (content templates).
+
+        '
+      flows:
+        clientCredentials:
+          tokenUrl: https://oauth2.asnapieu.com/token
+          scopes:
+            att: Attachments
+            chn: Channels
+            cnt: Contacts
+            evt: Events
+            lst: Lists
+            nu: Named Users
+            pln: Pipelines
+            psh: Push
+            rpt: Reports
+            sch: Schedules
+            tpl: Content Templates
