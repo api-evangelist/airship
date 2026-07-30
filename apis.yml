@@ -4,7 +4,20 @@ name: Airship
 kind: company
 description: Airship is a mobile experience and customer engagement platform offering push, in-app, email, SMS, MMS, and feature-flagged
   in-app messaging across mobile and web.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airship.png
 tags:
   - Notifications
   - Push
@@ -15,64 +28,164 @@ created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-  - name: Airship Push API
-    description: Send push notifications across iOS, Android and web channels.
-    humanURL: https://docs.airship.com/api/ua/
-    baseURL: https://go.urbanairship.com/api
-    tags:
-    - Push
-    properties:
-    - type: Documentation
-      url: https://docs.airship.com/api/ua/
-  - name: Airship Channels & Named Users API
-    description: Register, list and manage channels (devices) and named users.
-    humanURL: https://docs.airship.com/api/ua/
-    baseURL: https://go.urbanairship.com/api
-    tags:
-    - Channels
-    - Users
-    properties:
-    - type: Documentation
-      url: https://docs.airship.com/api/ua/
-  - name: Airship Segments API
-    description: Create and manage segments and tags for targeting.
-    humanURL: https://docs.airship.com/api/ua/
-    baseURL: https://go.urbanairship.com/api
-    tags:
-    - Segmentation
-    properties:
-    - type: Documentation
-      url: https://docs.airship.com/api/ua/
-  - name: Airship Automation & Journeys API
-    description: Build automated and triggered journeys across channels.
-    humanURL: https://docs.airship.com/api/ua/
-    baseURL: https://go.urbanairship.com/api
-    tags:
-    - Automation
-    - Journeys
-    properties:
-    - type: Documentation
-      url: https://docs.airship.com/api/ua/
-  - name: Airship Email & SMS API
-    description: Send email and SMS messages alongside push.
-    humanURL: https://docs.airship.com/api/ua/
-    baseURL: https://go.urbanairship.com/api
-    tags:
-    - Email
-    - SMS
-    properties:
-    - type: Documentation
-      url: https://docs.airship.com/api/ua/
-  - name: Airship Reports API
-    description: Read message and engagement reports.
-    humanURL: https://docs.airship.com/api/ua/
-    baseURL: https://go.urbanairship.com/api
-    tags:
-    - Reports
-    - Analytics
-    properties:
-    - type: Documentation
-      url: https://docs.airship.com/api/ua/
+- name: Airship Push API
+  description: Send push notifications across iOS, Android and web channels.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Push
+  properties:
+  - type: Documentation
+    url: https://docs.airship.com/api/ua/
+- name: Airship Channels & Named Users API
+  description: Register, list and manage channels (devices) and named users.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Channels
+  - Users
+  properties:
+  - type: Documentation
+    url: https://docs.airship.com/api/ua/
+- name: Airship Segments API
+  description: Create and manage segments and tags for targeting.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Segmentation
+  properties:
+  - type: Documentation
+    url: https://docs.airship.com/api/ua/
+- name: Airship Automation & Journeys API
+  description: Build automated and triggered journeys across channels.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Automation
+  - Journeys
+  properties:
+  - type: Documentation
+    url: https://docs.airship.com/api/ua/
+- name: Airship Email & SMS API
+  description: Send email and SMS messages alongside push.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Email
+  - SMS
+  properties:
+  - type: Documentation
+    url: https://docs.airship.com/api/ua/
+- name: Airship Reports API
+  description: Read message and engagement reports.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Reports
+  - Analytics
+  properties:
+  - type: Documentation
+    url: https://docs.airship.com/api/ua/
+- aid: airship:airship-channels-api
+  name: Airship Channels API
+  description: The Channels API from Airship — 2 operation(s) for channels.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Channels
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-channels-api-openapi.yml
+- aid: airship:airship-custom-events-api
+  name: Airship Custom Events API
+  description: The Custom Events API from Airship — 1 operation(s) for custom events.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Custom Events
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-custom-events-api-openapi.yml
+- aid: airship:airship-lists-api
+  name: Airship Lists API
+  description: The Lists API from Airship — 2 operation(s) for lists.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Lists
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-lists-api-openapi.yml
+- aid: airship:airship-message-center-api
+  name: Airship Message Center API
+  description: The Message Center API from Airship — 2 operation(s) for message center.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Message Center
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-message-center-api-openapi.yml
+- aid: airship:airship-named-users-api
+  name: Airship Named Users API
+  description: The Named Users API from Airship — 3 operation(s) for named users.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Named Users
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-named-users-api-openapi.yml
+- aid: airship:airship-push-api
+  name: Airship Push API
+  description: The Push API from Airship — 2 operation(s) for push.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Push
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-push-api-openapi.yml
+- aid: airship:airship-reports-api
+  name: Airship Reports API
+  description: The Reports API from Airship — 2 operation(s) for reports.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-reports-api-openapi.yml
+- aid: airship:airship-schedules-api
+  name: Airship Schedules API
+  description: The Schedules API from Airship — 2 operation(s) for schedules.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Schedules
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-schedules-api-openapi.yml
+- aid: airship:airship-segments-api
+  name: Airship Segments API
+  description: The Segments API from Airship — 2 operation(s) for segments.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Segments
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-segments-api-openapi.yml
+- aid: airship:airship-templates-api
+  name: Airship Templates API
+  description: The Templates API from Airship — 2 operation(s) for templates.
+  humanURL: https://docs.airship.com/api/ua/
+  baseURL: https://go.urbanairship.com/api
+  tags:
+  - Templates
+  properties:
+  - type: OpenAPI
+    url: openapi/airship-templates-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/airship-agentic-access.yml
