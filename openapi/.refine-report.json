@@ -1,0 +1,32 @@
+{
+  "provider": "airship",
+  "sources": [
+    "airship-channels-api-openapi.yml",
+    "airship-custom-events-api-openapi.yml",
+    "airship-lists-api-openapi.yml",
+    "airship-message-center-api-openapi.yml",
+    "airship-named-users-api-openapi.yml",
+    "airship-push-api-openapi.yml",
+    "airship-reports-api-openapi.yml",
+    "airship-schedules-api-openapi.yml",
+    "airship-segments-api-openapi.yml",
+    "airship-templates-api-openapi.yml"
+  ],
+  "outputs": [
+    "airship-channels-api-openapi.yml",
+    "airship-custom-events-api-openapi.yml",
+    "airship-lists-api-openapi.yml",
+    "airship-message-center-api-openapi.yml",
+    "airship-named-users-api-openapi.yml",
+    "airship-push-api-openapi.yml",
+    "airship-reports-api-openapi.yml",
+    "airship-schedules-api-openapi.yml",
+    "airship-segments-api-openapi.yml",
+    "airship-templates-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
