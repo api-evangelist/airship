@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Reports API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "App sends report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/reports/sends"
+          },
+          "docs": "App sends report"
+        },
+        {
+          "info": {
+            "name": "App opens report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/reports/opens"
+          },
+          "docs": "App opens report"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,101 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Schedules API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Schedules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List scheduled messages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/schedules"
+          },
+          "docs": "List scheduled messages"
+        },
+        {
+          "info": {
+            "name": "Create a scheduled message",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/schedules"
+          },
+          "docs": "Create a scheduled message"
+        },
+        {
+          "info": {
+            "name": "Get scheduled message",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/schedules/:schedule_id",
+            "params": [
+              {
+                "name": "schedule_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get scheduled message"
+        },
+        {
+          "info": {
+            "name": "Update scheduled message",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://go.airship.com/api/schedules/:schedule_id",
+            "params": [
+              {
+                "name": "schedule_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update scheduled message"
+        },
+        {
+          "info": {
+            "name": "Delete scheduled message",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/schedules/:schedule_id",
+            "params": [
+              {
+                "name": "schedule_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete scheduled message"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

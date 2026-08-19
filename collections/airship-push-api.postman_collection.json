@@ -1,0 +1,204 @@
+{
+  "item": [
+    {
+      "id": "5303636c-7039-4a65-9b31-d08f0063ae72",
+      "name": "Push",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f0af3090-57a8-4830-88f7-c86fc8fdc1b6",
+          "name": "Send a push notification",
+          "request": {
+            "name": "Send a push notification",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "push"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c5c0f3a1-b0bc-4e3d-ac17-e03bd680619a",
+              "name": "Accepted - returns push_ids, message_ids and/or content_urls",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "push"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Accepted",
+              "code": 202,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "02132655-98f9-48ba-96d6-701e6d7f5395",
+          "name": "Validate a push payload without sending",
+          "request": {
+            "name": "Validate a push payload without sending",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "push",
+                "validate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7b715031-894e-4d9e-a525-5174b808d64c",
+              "name": "Valid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "push",
+                    "validate"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://go.airship.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "45c4e6b3-894c-4fa0-a7c2-dece920c833e",
+    "name": "Airship REST Channels Push API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 representation of the Airship (formerly Urban Airship)\nREST API derived from https://www.airship.com/docs/developer/rest-api/ua/.\nAirship is a mobile customer engagement platform offering push, in-app, web,\nSMS, MMS, email messaging, named users, channels, segments, schedules, lists,\npipelines, and reports. Authentication supports Basic Auth (App or Master),\nBearer Token, and OAuth 2.0 with scoped tokens.\n\n\nContact Support:\n Name: Airship",
+      "type": "text/plain"
+    }
+  }
+}

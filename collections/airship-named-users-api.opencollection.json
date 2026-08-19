@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Named Users API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Named Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List named users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/named_users"
+          },
+          "docs": "List named users"
+        },
+        {
+          "info": {
+            "name": "Associate a channel with a named user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/named_users/associate"
+          },
+          "docs": "Associate a channel with a named user"
+        },
+        {
+          "info": {
+            "name": "Disassociate a channel from a named user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/named_users/disassociate"
+          },
+          "docs": "Disassociate a channel from a named user"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

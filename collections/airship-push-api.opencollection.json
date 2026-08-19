@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Push API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Push",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Send a push notification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/push",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Send a push notification"
+        },
+        {
+          "info": {
+            "name": "Validate a push payload without sending",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/push/validate"
+          },
+          "docs": "Validate a push payload without sending"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

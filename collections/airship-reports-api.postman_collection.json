@@ -1,0 +1,183 @@
+{
+  "item": [
+    {
+      "id": "0678f799-cf03-451e-ba84-e591729ad430",
+      "name": "Reports",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6141ad28-fd51-436b-8a61-3919dcff87f5",
+          "name": "App sends report",
+          "request": {
+            "name": "App sends report",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "reports",
+                "sends"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7d8637f0-4ad2-4353-8f9e-fe72a1fff9c7",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "reports",
+                    "sends"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "07e2dbda-31be-4c06-9524-c5c17ed732b4",
+          "name": "App opens report",
+          "request": {
+            "name": "App opens report",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "reports",
+                "opens"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "737536b2-c6eb-4c36-bfe5-0d7d87925b18",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "reports",
+                    "opens"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://go.airship.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "35a955a9-309a-45b3-b499-fd55b57bf5f1",
+    "name": "Airship REST Channels Reports API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Best-effort OpenAPI 3.1 representation of the Airship (formerly Urban Airship)\nREST API derived from https://www.airship.com/docs/developer/rest-api/ua/.\nAirship is a mobile customer engagement platform offering push, in-app, web,\nSMS, MMS, email messaging, named users, channels, segments, schedules, lists,\npipelines, and reports. Authentication supports Basic Auth (App or Master),\nBearer Token, and OAuth 2.0 with scoped tokens.\n\n\nContact Support:\n Name: Airship",
+      "type": "text/plain"
+    }
+  }
+}

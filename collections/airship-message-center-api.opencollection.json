@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Message Center API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Message Center",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Delete a Message Center message from inboxes",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/user/messages/:push_id",
+            "params": [
+              {
+                "name": "push_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a Message Center message from inboxes"
+        },
+        {
+          "info": {
+            "name": "Batch delete Message Center messages (max 50)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/user/messages/batch-delete"
+          },
+          "docs": "Batch delete Message Center messages (max 50)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

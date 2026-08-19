@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Custom Events API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Custom Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create custom events",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/custom-events"
+          },
+          "docs": "Create custom events"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

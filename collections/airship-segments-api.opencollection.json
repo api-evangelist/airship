@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Segments API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Segments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List segments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/segments"
+          },
+          "docs": "List segments"
+        },
+        {
+          "info": {
+            "name": "Create a segment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/segments"
+          },
+          "docs": "Create a segment"
+        },
+        {
+          "info": {
+            "name": "Get segment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/segments/:segment_id",
+            "params": [
+              {
+                "name": "segment_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get segment"
+        },
+        {
+          "info": {
+            "name": "Delete segment",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/segments/:segment_id",
+            "params": [
+              {
+                "name": "segment_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete segment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

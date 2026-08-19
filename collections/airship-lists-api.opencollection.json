@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Lists API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Lists",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List static lists",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/lists"
+          },
+          "docs": "List static lists"
+        },
+        {
+          "info": {
+            "name": "Create static list",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/lists"
+          },
+          "docs": "Create static list"
+        },
+        {
+          "info": {
+            "name": "Get list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/lists/:list_name",
+            "params": [
+              {
+                "name": "list_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get list"
+        },
+        {
+          "info": {
+            "name": "Delete list",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/lists/:list_name",
+            "params": [
+              {
+                "name": "list_name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete list"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

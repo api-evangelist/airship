@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels Templates API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List content templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/templates"
+          },
+          "docs": "List content templates"
+        },
+        {
+          "info": {
+            "name": "Create content template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://go.airship.com/api/templates"
+          },
+          "docs": "Create content template"
+        },
+        {
+          "info": {
+            "name": "Get template",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/templates/:template_id",
+            "params": [
+              {
+                "name": "template_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get template"
+        },
+        {
+          "info": {
+            "name": "Delete template",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://go.airship.com/api/templates/:template_id",
+            "params": [
+              {
+                "name": "template_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete template"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

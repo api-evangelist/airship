@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Airship REST Channels API",
+    "version": "ua"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Channels",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List channels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/channels"
+          },
+          "docs": "List channels"
+        },
+        {
+          "info": {
+            "name": "Get a channel",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://go.airship.com/api/channels/:channel_id",
+            "params": [
+              {
+                "name": "channel_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a channel"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
