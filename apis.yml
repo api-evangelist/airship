@@ -19,6 +19,12 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airship.png
 tags:
+  - Notification
+  - Push
+  - Email
+  - Mobile
+  - CDP
+tags_raw:
   - Notifications
   - Push
   - Email
@@ -42,6 +48,9 @@ apis:
   humanURL: https://docs.airship.com/api/ua/
   baseURL: https://go.urbanairship.com/api
   tags:
+  - Channels
+  - User
+  tags_raw:
   - Channels
   - Users
   properties:
@@ -112,6 +121,8 @@ apis:
   humanURL: https://docs.airship.com/api/ua/
   baseURL: https://go.urbanairship.com/api
   tags:
+  - List
+  tags_raw:
   - Lists
   properties:
   - type: OpenAPI
