@@ -185,6 +185,8 @@ apis:
   humanURL: https://docs.airship.com/api/ua/
   baseURL: https://go.urbanairship.com/api
   tags:
+  - Schedule
+  tags_raw:
   - Schedules
   properties:
   - type: OpenAPI
