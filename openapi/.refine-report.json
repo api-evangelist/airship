@@ -1,16 +1,7 @@
 {
   "provider": "airship",
   "sources": [
-    "airship-channels-api-openapi.yml",
-    "airship-custom-events-api-openapi.yml",
-    "airship-lists-api-openapi.yml",
-    "airship-message-center-api-openapi.yml",
-    "airship-named-users-api-openapi.yml",
-    "airship-push-api-openapi.yml",
-    "airship-reports-api-openapi.yml",
-    "airship-schedules-api-openapi.yml",
-    "airship-segments-api-openapi.yml",
-    "airship-templates-api-openapi.yml"
+    "_original/airship-openapi.yml"
   ],
   "outputs": [
     "airship-channels-api-openapi.yml",
@@ -27,6 +18,21 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "airship-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "airship-channels-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-custom-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-lists-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-message-center-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-named-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-push-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-reports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-schedules-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-segments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "airship-templates-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

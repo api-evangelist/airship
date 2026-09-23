@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Airship REST Channels Schedules API
+  title: Airship REST Schedules API
   version: ua
   description: 'Best-effort OpenAPI 3.1 representation of the Airship (formerly Urban Airship)
 
@@ -12,9 +12,7 @@ info:
 
     pipelines, and reports. Authentication supports Basic Auth (App or Master),
 
-    Bearer Token, and OAuth 2.0 with scoped tokens.
-
-    '
+    Bearer Token, and OAuth 2.0 with scoped tokens.'
   contact:
     name: Airship
     url: https://www.airship.com/docs/developer/rest-api/ua/
