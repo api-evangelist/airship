@@ -212,6 +212,9 @@ apis:
   - type: OpenAPI
     url: openapi/airship-templates-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/airship-capability-edges.yml
+    name: Airship Business Capability Map
   - type: AgenticAccess
     url: agentic-access/airship-agentic-access.yml
   - type: VulnerabilityDisclosure
