@@ -1,0 +1,107 @@
+generated: '2026-10-14'
+edges:
+- partner_name: Twilio Segment
+  partner: segment
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-airship
+  coverage_role:
+  - destination
+  - source
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - actions-airship
+      - airship
+      status: PUBLIC
+      partner_owned: true
+      connection_modes:
+      - cloud:mobile
+      - cloud:server
+      - cloud:web
+      accepted_methods:
+      - Alias
+      - Group
+      - Identify
+      - Page
+      - Track
+    source:
+      catalog_entries:
+      - airship
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+- partner_name: mParticle
+  partner: mparticle
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://docs.mparticle.com/integrations/airship/audience/
+  coverage_role:
+  - destination
+  - source
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - airship
+      integration_types:
+      - audience
+      - event
+    source:
+      catalog_entries:
+      - airship
+      integration_types:
+      - feed
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+- partner_name: Hightouch
+  partner: hightouch
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://hightouch.com/docs/destinations/airship
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - airship
+      status: released
+      sync_types:
+      - Attribute Lists
+      - Channels
+      - Custom Events
+      - Named Users
+      - Push Notification
+      - Static Lists
+      - Subscription Lists
+      - Tags
+      - Templated Push
+      sync_modes:
+      - add
+      - all
+      - insert
+      - message
+      - remove
+      - update
+      - upsert
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+method: searched
+checked:
+- https://docs.mparticle.com/integrations/airship/audience/
+- https://hightouch.com/docs/destinations/airship
+- https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-airship
+source:
+- https://docs.mparticle.com/integrations/airship/audience/
+- https://hightouch.com/docs/destinations/airship
+- https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-airship
