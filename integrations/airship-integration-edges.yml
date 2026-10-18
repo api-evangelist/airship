@@ -96,9 +96,39 @@ edges:
       - upsert
   detected_by: sweep-cdp.py
   first_seen: '2026-10-14'
+- partner_name: Meltano
+  partner: meltano
+  partner_match: aggregator
+  type: marketplace
+  marketplace: meltano-hub
+  channel: elt-connector
+  relationship: ipaas-bridge
+  direction: third-party
+  evidence: https://hub.meltano.com/extractors/tap-urban-airship--singer-io
+  category: null
+  contract_reference:
+    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
+    spec_file: null
+    role: elt-connector:meltano-hub
+    registered_name: Airship
+    matched_domain: airship.com
+    matched_by: domain
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    plugins:
+    - tap-urban-airship--singer-io
+    maintenance_status:
+    - inactive
+    quality:
+    - bronze
+    builder: 'community (Meltano Hub variant maintainers: singer-io)'
+  detected_by: sweep-data-integration.py
+  first_seen: '2026-10-18'
 method: searched
 checked:
 - https://docs.mparticle.com/integrations/airship/audience/
+- https://github.com/meltano/hub
 - https://hightouch.com/docs/destinations/airship
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-airship
 source:
