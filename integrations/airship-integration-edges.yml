@@ -125,12 +125,83 @@ edges:
     builder: 'community (Meltano Hub variant maintainers: singer-io)'
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: CocoaPods trunk
+  partner: null
+  partner_match: register
+  type: register
+  channel: package-registry
+  relationship: distribution-channel
+  direction: provider-built
+  evidence: https://cocoapods.org/pods/Airship
+  category: iOS SDK (CocoaPods)
+  contract_reference:
+    register: CocoaPods trunk (cdn.cocoapods.org Specs; github.com/CocoaPods/Specs)
+    spec_file: null
+    role: cocoapods-publisher
+    registered_name: Airship
+    matched_domain: airship.com
+    matched_by: domain
+    pods:
+    - pod: Airship
+      version: 20.12.1
+      homepage: https://www.airship.com
+      deprecated: false
+    - pod: AirshipContentExtension
+      version: 18.14.4
+      homepage: https://www.airship.com
+      deprecated: false
+    - pod: AirshipExtensions
+      version: 16.12.7
+      homepage: https://www.airship.com
+      deprecated: true
+    - pod: AirshipFrameworkProxy
+      version: 15.16.1
+      homepage: https://www.airship.com
+      deprecated: false
+    - pod: AirshipGimbalAdapter
+      version: 4.1.2
+      homepage: https://www.airship.com
+      deprecated: false
+    - pod: AirshipServiceExtension
+      version: 20.12.1
+      homepage: https://www.airship.com
+      deprecated: false
+    signal_note: latest podspec homepage (domain) + authors (name); pods, versions and counts are context
+    detected_by: sweep-mobile-sdk-index.py
+    detected: '2026-10-21'
+  detected_by: sweep-mobile-sdk-index.py
+  first_seen: '2026-10-21'
+- partner_name: Google Play Developer (Google Play SDK Index)
+  partner: google-play
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: Google Play SDK Index
+  evidence: https://play.google.com/sdks/details/com-urbanairship-android-urbanairship-fcm
+  mirror_of: google-play/integrations/google-play-integration-edges.yml
+  apps:
+  - Airship SDK
+  - Apptimize SDK
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: mobile SDK (analytics, marketing-and-engagement)
+  publisher_verified:
+  - Registered in Google Play SDK Console
 method: searched
 checked:
 - https://docs.mparticle.com/integrations/airship/audience/
 - https://github.com/meltano/hub
 - https://hightouch.com/docs/destinations/airship
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-airship
+- https://cdn.cocoapods.org/all_pods.txt
+- https://cert.appdefensealliance.org/certifications
+- https://play.google.com/sdks
+- https://search.maven.org/solrsearch/select
+- google-play/integrations/google-play-integration-edges.yml
 source:
 - https://docs.mparticle.com/integrations/airship/audience/
 - https://hightouch.com/docs/destinations/airship
