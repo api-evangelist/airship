@@ -1,4 +1,4 @@
-# Airship (airship)
+# Airship
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,138 +66,147 @@
 
 Airship is a mobile experience and customer engagement platform offering push, in-app, email, SMS, MMS, and feature-flagged in-app messaging across mobile and web.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/apis.yml)
+**Areas:** Notification · Push · Email · Mobile · CDP
 
-## Tags
+## Airship on APIs.io
 
-- Notifications
-- Push
-- Email
-- Mobile
-- CDP
+Everything profiled for Airship is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/airship/](https://apis.io/providers/airship/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (16)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Airship Push API](https://apis.io/apis/airship/airship-push-api/) — Send push notifications across iOS, Android and web channels.
+- [Airship Channels & Named Users API](https://apis.io/apis/airship/airship-channels-named-users-api/) — Register, list and manage channels (devices) and named users.
+- [Airship Segments API](https://apis.io/apis/airship/airship-segments-api/) — Create and manage segments and tags for targeting.
+- [Airship Automation & Journeys API](https://apis.io/apis/airship/airship-automation-journeys-api/) — Build automated and triggered journeys across channels.
+- [Airship Email & SMS API](https://apis.io/apis/airship/airship-email-sms-api/) — Send email and SMS messages alongside push.
+- [Airship Reports API](https://apis.io/apis/airship/airship-reports-api/) — Read message and engagement reports.
+- [Airship Channels API](https://apis.io/apis/airship/airship-channels-api/) — The Channels API from Airship — 2 operation(s) for channels.
+- [Airship Custom Events API](https://apis.io/apis/airship/airship-custom-events-api/) — The Custom Events API from Airship — 1 operation(s) for custom events.
+- [Airship Lists API](https://apis.io/apis/airship/airship-lists-api/) — The Lists API from Airship — 2 operation(s) for lists.
+- [Airship Message Center API](https://apis.io/apis/airship/airship-message-center-api/) — The Message Center API from Airship — 2 operation(s) for message center.
+- [Airship Named Users API](https://apis.io/apis/airship/airship-named-users-api/) — The Named Users API from Airship — 3 operation(s) for named users.
+- [Airship Push API](https://apis.io/apis/airship/airship-push-api/) — The Push API from Airship — 2 operation(s) for push.
+- [Airship Reports API](https://apis.io/apis/airship/airship-reports-api/) — The Reports API from Airship — 2 operation(s) for reports.
+- [Airship Schedules API](https://apis.io/apis/airship/airship-schedules-api/) — The Schedules API from Airship — 2 operation(s) for schedules.
+- [Airship Segments API](https://apis.io/apis/airship/airship-segments-api/) — The Segments API from Airship — 2 operation(s) for segments.
+- [Airship Templates API](https://apis.io/apis/airship/airship-templates-api/) — The Templates API from Airship — 2 operation(s) for templates.
 
-## APIs
+### Published properties
 
-### Airship Push API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Send push notifications across iOS, Android and web channels.
+#### Agentic access (1)
 
-- **Human URL:** [https://docs.airship.com/api/ua/](https://docs.airship.com/api/ua/)
-- **Base URL:** `https://go.urbanairship.com/api`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Airship Agentic Access](https://apis.io/agentic-access/airship/airship-agentic-access/)
 
-- Push
+#### Collections (11)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://docs.airship.com/api/ua/)
-- [Postman Collection](collections/airship.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airship.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Airship REST API](https://apis.io/collections/airship/open-airship/)
+- [Airship REST Channels API](https://apis.io/collections/airship/open-airship-channels-api/)
+- [Airship REST Channels Custom Events API](https://apis.io/collections/airship/open-airship-custom-events-api/)
+- [Airship REST Channels Lists API](https://apis.io/collections/airship/open-airship-lists-api/)
+- [Airship REST Channels Message Center API](https://apis.io/collections/airship/open-airship-message-center-api/)
+- [Airship REST Channels Named Users API](https://apis.io/collections/airship/open-airship-named-users-api/)
+- [Airship REST Channels Push API](https://apis.io/collections/airship/open-airship-push-api/)
+- [Airship REST Channels Reports API](https://apis.io/collections/airship/open-airship-reports-api/)
+- [Airship REST Channels Schedules API](https://apis.io/collections/airship/open-airship-schedules-api/)
+- [Airship REST Channels Segments API](https://apis.io/collections/airship/open-airship-segments-api/)
+- [Airship REST Channels Templates API](https://apis.io/collections/airship/open-airship-templates-api/)
 
-### Airship Channels & Named Users API
+#### Security (3)
 
-Register, list and manage channels (devices) and named users.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://docs.airship.com/api/ua/](https://docs.airship.com/api/ua/)
-- **Base URL:** `https://go.urbanairship.com/api`
+- [Airship Authentication](https://apis.io/security/airship/airship-authentication/)
+- [Airship Domain Security](https://apis.io/security/airship/airship-domain-security/)
+- [Airship Vulnerability Disclosure](https://apis.io/security/airship/airship-vulnerability-disclosure/)
 
-#### Tags
+#### OAuth scopes (1)
 
-- Channels
-- Users
+The permissions the API asks for.
 
-#### Properties
+- [Airship Scopes](https://apis.io/scopes/airship/airship-scopes/)
 
-- [Documentation](https://docs.airship.com/api/ua/)
-- [Postman Collection](collections/airship.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airship.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-### Airship Segments API
+Published plans, tiers and prices.
 
-Create and manage segments and tags for targeting.
+- [Airship Plans Pricing](https://apis.io/plans/airship/airship-plans-pricing/)
 
-- **Human URL:** [https://docs.airship.com/api/ua/](https://docs.airship.com/api/ua/)
-- **Base URL:** `https://go.urbanairship.com/api`
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Segmentation
+- [Airship Rate Limits](https://apis.io/rate-limits/airship/airship-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://docs.airship.com/api/ua/)
-- [Postman Collection](collections/airship.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airship.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Airship Automation & Journeys API
+- [Airship Finops](https://apis.io/finops/airship/airship-finops/)
 
-Build automated and triggered journeys across channels.
+## Where to find this API
 
-- **Human URL:** [https://docs.airship.com/api/ua/](https://docs.airship.com/api/ua/)
-- **Base URL:** `https://go.urbanairship.com/api`
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Tags
-
-- Automation
-- Journeys
-
-#### Properties
-
-- [Documentation](https://docs.airship.com/api/ua/)
-- [Postman Collection](collections/airship.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airship.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Airship Email & SMS API
-
-Send email and SMS messages alongside push.
-
-- **Human URL:** [https://docs.airship.com/api/ua/](https://docs.airship.com/api/ua/)
-- **Base URL:** `https://go.urbanairship.com/api`
-
-#### Tags
-
-- Email
-- SMS
-
-#### Properties
-
-- [Documentation](https://docs.airship.com/api/ua/)
-- [Postman Collection](collections/airship.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airship.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Airship Reports API
-
-Read message and engagement reports.
-
-- **Human URL:** [https://docs.airship.com/api/ua/](https://docs.airship.com/api/ua/)
-- **Base URL:** `https://go.urbanairship.com/api`
-
-#### Tags
-
-- Reports
-- Analytics
-
-#### Properties
-
-- [Documentation](https://docs.airship.com/api/ua/)
-- [Postman Collection](collections/airship.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/airship.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/airship-social)
 - [Website](https://www.airship.com/)
-- [Plans](plans/airship-plans-pricing.yml)
-- [Rate Limits](rate-limits/airship-rate-limits.yml)
-- [Fin Ops](finops/airship-finops.yml)
+- [Blog](https://www.airship.com/feed/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 26.3** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 46.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 5.3 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 27.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/airship/](https://apis.io/providers/airship/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Airship: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/airship/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
